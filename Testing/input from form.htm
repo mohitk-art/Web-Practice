@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>input from form</title>
+<script language="javascript" type="text/javascript" src="jquery/jquery-1.8.3.min.js"></script>
+<script language="javascript">
+function b()
+{
+var a=document.form.value1.value;
+var b=document.form.value2.value;
+if(document.form.value1.value=="") /*or a=="" */
+{
+alert("Please Enter First Name");
+/*document.form.value1.focus(); */
+return false;
+}
+
+if(b=="")
+{
+alert("Please Enter Last Name");
+/*document.form.value2.focus(); */
+return false;
+}
+
+document.write("Welcome ",a," ",b," in this site");
+}
+</script>
+
+</head>
+
+<body>
+<form name="form" method="post" action="#">
+<table>
+<tr><td><input type="text" name="value1" placeholder="Enter first name"/></td></tr>
+<tr><td><input type="text" name="value2" placeholder="Enter Last name"/></td></tr>
+</table>
+<input type="button" name="submit" value="get" onClick="b();"/>
+</form>
+</body>
+</html>
